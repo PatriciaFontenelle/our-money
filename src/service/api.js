@@ -1,7 +1,5 @@
 import axios from "axios";
 
 export const apiClient = axios.create({
-  baseURL: 'https://some-domain.com/api/',
-  timeout: 1000,
-  headers: {'X-Custom-Header': 'foobar'}
+  baseURL: "https://37sn07n0rf.execute-api.us-east-1.amazonaws.com"
 });
