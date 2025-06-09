@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  font-family: "Roboto", sans-serif;
+  color: #31352e;
+}
+
+@theme {
+  --color-light-gray: #ebebe8;
+  --color-dark-gray: #31352e;
+  --color-light-green: #d1e2c4;
+  --color-dark-green: #778a35;
+}
+
+@layer base {
+  input {
+    @apply rounded-[5px] border-1 border-gray-500 p-1;
+  }
+
+  button {
+    @apply rounded-[5px] border-0 outline-0 p-2 bg-light-green;
+  }
+
+  .input-group {
+    @apply flex flex-col gap-0.5;
+
+    label {
+      @apply text-[.75rem] font-semibold;
+    }
+  }
+}
