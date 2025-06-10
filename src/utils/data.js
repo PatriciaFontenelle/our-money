@@ -1,14 +1,16 @@
 export const data = {
-    categories: {
-
+  types: [
+    {
+      id: 1,
+      value: "Crédito",
     },
-    accounts: {
-
+    {
+      id: 2,
+      value: "Débito",
     },
-    cards: {
-
-    },
-    fixedExpenses: {
-        
-    }
-}
+  ],
+  categories: ["Mercado", "Lazer", "Delivery", "Farmácia", "Saúde", "Outros"],
+  accounts: ["Millenium", "Santander (crédito)", "Santander (débito)", "Oney"],
+  cards: {},
+  fixedExpenses: {},
+};

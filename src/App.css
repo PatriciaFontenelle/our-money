@@ -1,9 +1,12 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default
+}
 
 :root {
   font-family: "Roboto", sans-serif;
-  color: #31352e;
+  /* color: #31352e;
+  background-color: #ebebe8; */
 }
 
 @theme {
@@ -14,12 +17,16 @@
 }
 
 @layer base {
-  input {
-    @apply rounded-[5px] border-1 border-gray-500 p-1;
+  body {
+    @apply bg-light-gray;
+  }
+
+  input, textarea {
+    /* @apply rounded-[5px] border-1 border-gray-500 p-1; */
   }
 
   button {
-    @apply rounded-[5px] border-0 outline-0 p-2 bg-light-green;
+    @apply rounded-[5px] border-0 outline-0 p-2 bg-light-green cursor-pointer text-dark-gray;
   }
 
   .input-group {
