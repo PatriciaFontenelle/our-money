@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { apiClient } from "../../service/api";
+import { useNavigate } from "react-router";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   const onSubmit = (e) => {
     e.preventDefault();
-    apiClient.post("/auth", {email, password}).then((res) => {
-      window.localStorage.setItem("token", res.data.token)
-      console.log("Logou mermo")
-    })
+    apiClient.post("/auth", { email, password }).then((res) => {
+      window.localStorage.setItem("token", res.data.token);
+      navigate("/");
+    });
   };
 
   return (
@@ -19,12 +22,24 @@ const LoginPage = () => {
         <form onSubmit={onSubmit} className="flex flex-col gap-2">
           <div className="input-group">
             <label htmlFor="email">E-mail</label>
-            <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input
+              className="input"
+              type="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className="input-group">
             <label htmlFor="password">Senha</label>
-            <input type="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input
+              className="input"
+              type="password"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
 
           <button type="submit">Login</button>

@@ -2,11 +2,11 @@ export const data = {
   types: [
     {
       id: 1,
-      value: "Crédito",
+      value: "Débito",
     },
     {
       id: 2,
-      value: "Débito",
+      value: "Crédito",
     },
   ],
   categories: ["Mercado", "Lazer", "Delivery", "Farmácia", "Saúde", "Outros"],
